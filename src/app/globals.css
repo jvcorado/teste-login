@@ -3,25 +3,89 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground-rgb: #444648;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --checkbox-background-color: #006c3e;
+
+  --indent-level-1: 0;
+  --indent-level-2: 1rem;
+  --indent-level-3: 2rem;
+  --indent-level-4: 3rem;
+  --indent-level-5: 4rem;
+
+  --themeSearch: #ffffff;
+  --themeCards: #ffffff;
+  --themeModais: #ffffff;
+  --themeInputs: #ffffff;
+  --themeFontsPrimary: #444648;
+  --themeFontsSecondary: #737373;
+  /* #8a8a8a */
+  --themeBackground: #f2f5f3;
+  --themeMenu: #ffffff;
+  --themeStroke: #e9ecef;
+  --themeStrokeDatagrid: #e9ecef;
+  --themeBgTable: #f9f9f9;
+
+  --themeGreen: #006c3e;
+  --themeGreenLigth: #cee0d8;
+  --themeOrange: #e4810d;
+  --themeRed: #dc3545;
+  --borderInput: #e9ecef;
+  --skeleton: rgba(227, 227, 227, 0.237) 50%;
+
+  --dx-border-radius: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root.dark {
+  --themeSearch: #2d2d2d;
+  --themeCards: #333333;
+  --themeModais: #272727;
+  --themeInputs: #2d2d2d;
+  --themeFontsPrimary: #ffffff;
+  --themeFontsSecondary: #c5c5c5;
+  --themeBackground: #1f1f1f;
+  --themeMenu: #303032;
+  --themeStroke: #323232;
+  --themeStrokeDatagrid: #464646;
+  --themeBgTable: #2d2d2d;
+  --borderInput: #2d2d2d;
+  --skeleton: rgba(135, 135, 135, 0.237) 50%;
 }
 
+html,
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.embla {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.embla__container {
+  display: flex;
+  height: 100%;
+}
+
+.embla__slide {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+  flex: 0 0 100%;
+}
+
+@media (max-width: 767px) {
+  .bg-mobile-login {
+    background-image: url("https://res.cloudinary.com/dbsdq1thq/image/upload/v1728320136/bg-login_uocfvm.svg");
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    height: 65%;
+    width: 100%;
   }
 }
