@@ -36,7 +36,7 @@ export default function RootLayout({
         <link rel="canonical" href="https://app.simpplify.com.br/" />
         <title>Simpplify</title>
       </head>
-      <body>
+      <body id="root">
         <NextThemesProvider attribute="class" defaultTheme="light">
           {children}
         </NextThemesProvider>
